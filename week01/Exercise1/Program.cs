@@ -1,15 +1,18 @@
 using System;
 
-class Program
+namespace Exercise1
 {
-    static void Main(string[] args)
+    static class Program
     {
-        Console.WriteLine("What is your first name?");
-        string firstName = Console.ReadLine();
+        static void Main()
+        {
+            Console.WriteLine("What is your first name?");
+            string firstName = Console.ReadLine();
 
-        Console.WriteLine("What is your last name?");
-        string lastName = Console.ReadLine();
-        
-        Console.Write($"Your name is {lastName}, {firstName} {lastName}.");
+            Console.WriteLine("What is your last name?");
+            string lastName = Console.ReadLine();
+
+            Console.Write($"Your name is {lastName}, {firstName} {lastName}.");
+        }
     }
 }
