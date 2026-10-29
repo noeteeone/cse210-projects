@@ -7,8 +7,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
   </PropertyGroup>  
-  
-<Project>
   console.WriteLine("What is your first name?");
   string first-name = Console.ReadLine();
   console.WriteLine("What is your last name?");
