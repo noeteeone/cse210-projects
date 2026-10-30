@@ -11,7 +11,7 @@ static class Program
         Console.WriteLine("What is your percentage score?");
         string mark = Console.ReadLine();
         int score = int.Parse(mark);
-        int LastDigit = score % 10;
+        int LastDigit = score  % 10;
         string grade = "";
         if (score >= 90)
         {
@@ -41,11 +41,11 @@ static class Program
         {
             Console.WriteLine("Unfortunately You Did not Pass, Try Again");
         }
-        if (LastDigit >= 7)
+        if (LastDigit >= 7 && score > 97 && score < 60)
         {
             Console.WriteLine($"Your grade is: {grade}+");
         }
-        else if (LastDigit <= 3)
+        else if (LastDigit <= 3 && score < 60)
         {
             Console.WriteLine($"Your grade is: {grade}-");
         }
