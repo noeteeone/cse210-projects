@@ -32,7 +32,14 @@ static class Program
         {
             grade = "F";
         }
-
+        if (score >= 70)
+        {
+            Console.WriteLine("Congratulations You Passed The Course");
+        }
+        else if (score < 70)
+        {
+            Console.WriteLine("Unfortunately You Did not Pass, Try Again");
+        }
         // Output the final result to the user
         Console.WriteLine($"Your grade is: {grade}");
     }
