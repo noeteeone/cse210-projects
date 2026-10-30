@@ -1,9 +1,36 @@
 using System;
+using System.Formats.Asn1;
+using System.Runtime.CompilerServices;
 
-class Program
+namespace Exercise2;
+
+static class Program;
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Console.WriteLine("Hello World! This is the Exercise2 Project.");
+        Console.WriteLine("What is your percentage score?");
+        string mark = Console.ReadLine();
+        int score = int.Parse(mark);
+        string grade = "";
+        if (score >= 90)
+        {
+            grade = "A";
+        }
+        else if (score >= 80)
+        {
+            grade = "B";
+        }
+        else if (score >= 70)
+        {
+            grade = "C";
+        }
+        else if (score >= 60)
+        {
+            grade = "D";
+        }
+        else if (score < 60)
+        {
+            grade = "F";
+        }
     }
 }
