@@ -53,7 +53,7 @@ static class Program
         {
             Console.WriteLine($"Your grade is: {grade}");
         }
-        else if (LastDigit <= 3 && score > 60)
+        else if (LastDigit <= 3 && score >= 60)
         {
             Console.WriteLine($"Your grade is: {grade}-");
         }
