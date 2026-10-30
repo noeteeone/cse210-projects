@@ -12,7 +12,6 @@ static class Program
         string mark = Console.ReadLine();
         int score = int.Parse(mark);
         string grade = "";
-        
         if (score >= 90)
         {
             grade = "A";
