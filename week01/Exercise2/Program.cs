@@ -34,7 +34,7 @@ static class Program
         }
         if (score >= 70)
         {
-            Console.WriteLine("Congratulations You Passed The Course");
+            Console.WriteLine("Congratulations You Passed The Course!");
         }
         else if (score < 70)
         {
