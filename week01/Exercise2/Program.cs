@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace Exercise2;
 
-static class Program;
+static class Program
 {
     static void Main()
     {
@@ -12,6 +12,7 @@ static class Program;
         string mark = Console.ReadLine();
         int score = int.Parse(mark);
         string grade = "";
+        
         if (score >= 90)
         {
             grade = "A";
@@ -28,9 +29,12 @@ static class Program;
         {
             grade = "D";
         }
-        else if (score < 60)
+        else
         {
             grade = "F";
         }
+
+        // Output the final result to the user
+        Console.WriteLine($"Your grade is: {grade}");
     }
 }
