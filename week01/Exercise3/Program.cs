@@ -9,11 +9,12 @@ class Program
         Console.WriteLine("Do you want to play the gussing game?");
         string answer = Console.ReadLine();
         answer = answer.ToLower();
-        if (answer != "yes")
-        {
-            return;
-        }
-        else if (answer == "yes")
+        while (answer == "yes")
+        //if (answer != "yes")
+        //{
+        //    return;
+        //}
+        //else if (answer == "yes")
         {
             Random randomGenerator = new Random();
             int number1 = randomGenerator.Next(1, 50);
