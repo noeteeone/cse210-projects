@@ -14,7 +14,7 @@ class Program
             //int number1 = randomGenerator.Next(1, 50);
             Console.WriteLine("Enter your number?");
             string input = Console.ReadLine();
-            int number2 = int.Parse(input);
+            number2 = int.Parse(input);
             //while (number2 != number1)
             //{
             if (number2 < number1)
