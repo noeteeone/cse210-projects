@@ -47,7 +47,7 @@ class Program
             }
     Console.WriteLine($"You entered {count} numbers.");
     Console.WriteLine($"The Total sum is {sum}.");
-    int averageNumber = sum / count;
+    double averageNumber = sum / count;
     Console.WriteLine($"The average number is {averageNumber}");
     Console.WriteLine();
     Console.WriteLine($"The largest number is {largestNumber}");
