@@ -9,7 +9,7 @@ class Program
         Console.WriteLine("Do you want to play the gussing game?");
         string answer = Console.ReadLine();
         answer = answer.ToLower();
-        if (answer != "yes")
+        if (answer != "yes" || answer != "y")
         {
             return;
         }
@@ -40,5 +40,6 @@ class Program
                 }
             }
         }
+        Console.WriteLine("Would you like to play again?")
     }
 }
