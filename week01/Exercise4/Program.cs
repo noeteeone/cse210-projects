@@ -21,14 +21,14 @@ class Program
             }
             while (userNumber != 0)
             {
-                //count = count + 1;
+                count = count + 1;
                 //sum = sum + userNumber;
                 Console.Write("Enter number : ");
                 input = Console.ReadLine();
                 userNumber = int.Parse(input);
                 numbers.Add(userNumber);
                 sum = sum + userNumber;
-                count = count + 1;
+                //count = count + 1;
                 Console.WriteLine();
                 Console.WriteLine($"The current sum is {sum}");
                 Console.WriteLine();
