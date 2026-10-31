@@ -8,7 +8,7 @@ class Program
         int count  = 0;
         int sum = 0;
         int largestNumber = 0;
-        int smallestNumber = 0;
+        //int smallestNumber = 0;
         Console.WriteLine("Enter a list of numbers, type 0 when finished");
         while (true)
         {
