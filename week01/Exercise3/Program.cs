@@ -12,20 +12,20 @@ class Program
         Console.WriteLine("Enter your number?");
         string input = Console.ReadLine();
         int number2 = int.Parse(input);
-        while (number2 != number1)
+        //while (number2 != number1)
+        //{
+        if (number2 < number1)
         {
-            if (number2 < number1)
-            {
-                Console.WriteLine("Lower");
-            }
-            else if (number2 > number1)
-            {
-                Console.WriteLine("higher");
-            }
-            else if (number2 == number1)
-            {
-                Console.WriteLine("Congratulations you guessed right");
-            }
+            Console.WriteLine("Lower");
         }
+        else if (number2 > number1)
+        {
+            Console.WriteLine("higher");
+        }
+        else if (number2 == number1)
+        {
+            Console.WriteLine("Congratulations you guessed right");
+        }
+        //}
     }
 }
