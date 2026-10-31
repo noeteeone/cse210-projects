@@ -6,7 +6,9 @@ class Program
 {
     static void Main()
     {
-        int number1 = 15;
+        //int number1 = 15;
+        Random randomGenerator = new Random();
+        int number1 = randomGenerator.Next(1, 50);
         int number2 = 0;
         while (number2 != number1)
         {
