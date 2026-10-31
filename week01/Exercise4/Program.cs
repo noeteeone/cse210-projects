@@ -8,7 +8,7 @@ class Program
         int count  = 0;
         int sum = 0;
         int largestNumber = 0;
-        //int smallestNumber = 0;
+        int smallestNumber = 999999;
         Console.WriteLine("Enter a list of numbers, type 0 when finished");
         while (true)
         {
@@ -18,6 +18,10 @@ class Program
             if (userNumber > largestNumber)
             {
                 largestNumber = userNumber;
+            }
+            if (userNumber < smallestNumber)
+            {
+                smallestNumber = userNumber;
             }
             sum = sum + userNumber;
             if (userNumber == 0)
@@ -36,6 +40,10 @@ class Program
                 {
                     largestNumber = userNumber;
                 }
+                if (userNumber < smallestNumber)
+                {
+                    smallestNumber = userNumber;
+                }
             }
     Console.WriteLine($"You entered {count} numbers.");
     Console.WriteLine($"The Total sum is {sum}.");
@@ -43,6 +51,7 @@ class Program
     Console.WriteLine($"The average number is {averageNumber}");
     Console.WriteLine();
     Console.WriteLine($"The largest number is {largestNumber}");
+    Console.WriteLine($"The smallest number is {smallestNumber}");
     Console.WriteLine(numbers);
     break;
         }
