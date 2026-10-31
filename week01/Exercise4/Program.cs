@@ -13,7 +13,7 @@ class Program
             Console.Write("Enter number : ");
             string input = Console.ReadLine();
             int userNumber = int.Parse(input);
-            count = count + 1;
+            //count = count + 1;
             sum = sum + userNumber;
             if (userNumber == 0)
             {
@@ -30,7 +30,7 @@ class Program
                 sum = sum + userNumber;
                 //count = count + 1;
                 Console.WriteLine();
-                Console.WriteLine($"The current sum is {sum}");
+                //Console.WriteLine($"The current sum is {sum}");
                 Console.WriteLine();
             }
 Console.WriteLine($"You entered {count} numbers.");
