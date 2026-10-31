@@ -51,7 +51,7 @@ class Program
     Console.WriteLine($"The average number is {averageNumber}");
     Console.WriteLine();
     Console.WriteLine($"The largest number is {largestNumber}");
-    Console.WriteLine($"The smallest number is {smallestNumber}");
+    Console.WriteLine($"The smallest positive number is {smallestNumber}");
     Console.WriteLine(numbers);
     break;
         }
