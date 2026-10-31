@@ -22,10 +22,13 @@ class Program
             {
                 break;
             }
-            else if (userNumber != 0)
+            while (userNumber != 0)
             {
                 count = count + 1;
                 //numbers = new List<int>();
+                Console.Write("Enter number : ");
+                input = Console.ReadLine();
+                userNumber = int.Parse(input);
                 numbers.Add(userNumber);
                 sum = sum + userNumber;
                 Console.WriteLine();
