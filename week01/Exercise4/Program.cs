@@ -37,6 +37,7 @@ class Program
             }
         Console.WriteLine($"You entered {count} numbers.");
         Console.WriteLine($"The Total sum is {sum}.");
+        Console.WriteLine();
         }
     }
 }
