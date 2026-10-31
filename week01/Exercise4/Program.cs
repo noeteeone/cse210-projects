@@ -57,7 +57,6 @@ class Program
         {
             Console.WriteLine(number);
         }
-    //Console.WriteLine(numbers);
     break;
         }
     }
