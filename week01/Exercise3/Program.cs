@@ -15,7 +15,7 @@ class Program
             Console.WriteLine("Enter your number?");
             string input = Console.ReadLine();
             number2 = int.Parse(input);
-            count = count++;
+            count = count + 1;
             if (number2 < number1)
             {
                 Console.WriteLine("Lower");
