@@ -53,7 +53,11 @@ class Program
     Console.WriteLine();
     Console.WriteLine($"The largest number is {largestNumber}");
     Console.WriteLine($"The smallest positive number is {smallestNumber}");
-    Console.WriteLine(numbers);
+    foreach (int number in numbers)
+        {
+            Console.WriteLine(number);
+        }
+    //Console.WriteLine(numbers);
     break;
         }
     }
