@@ -29,9 +29,9 @@ class Program
                 numbers.Add(userNumber);
                 sum = sum + userNumber;
                 //count = count + 1;
-                Console.WriteLine();
+                //Console.WriteLine();
                 //Console.WriteLine($"The current sum is {sum}");
-                Console.WriteLine();
+                //Console.WriteLine();
             }
 Console.WriteLine($"You entered {count} numbers.");
 Console.WriteLine($"The Total sum is {sum}.");
