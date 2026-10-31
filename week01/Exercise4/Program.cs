@@ -32,6 +32,7 @@ class Program
     int averageNumber = sum / count;
     Console.WriteLine($"The average number is {averageNumber}");
     Console.WriteLine();
+    Console.WriteLine(numbers);
     break;
         }
     }
