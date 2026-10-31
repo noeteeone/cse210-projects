@@ -15,7 +15,7 @@ class Program
         while (true)
         {
             //Console.WriteLine("Enter a list of numbers, type 0 when finished");
-            Console.WriteLine("Enter number : ");
+            Console.Write("Enter number : ");
             string input = Console.ReadLine();
             int userNumber = int.Parse(input);
             if (userNumber == 0)
