@@ -48,7 +48,7 @@ class Program
     Console.WriteLine($"You entered {count} numbers.");
     Console.WriteLine($"The Total sum is {sum}.");
     float averageNumber = sum / count;
-    Console.WriteLine($"The average number is {averageNumber}");
+    Console.WriteLine($"The average number is {averageNumber:F6}");
     Console.WriteLine();
     Console.WriteLine($"The largest number is {largestNumber}");
     Console.WriteLine($"The smallest number is {smallestNumber}");
