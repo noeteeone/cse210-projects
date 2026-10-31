@@ -6,7 +6,7 @@ class Program
     {
         List<int> numbers = new List<int>();
         int count  = 0;
-        int sum = 0;
+        int doublesum = 0;
         int largestNumber = 0;
         int smallestNumber = 999999;
         Console.WriteLine("Enter a list of numbers, type 0 when finished");
@@ -23,7 +23,7 @@ class Program
             {
                 smallestNumber = userNumber;
             }
-            sum = sum + userNumber;
+            doublesum = doublesum + userNumber;
             if (userNumber == 0)
             {
                 break;
@@ -35,7 +35,7 @@ class Program
                 input = Console.ReadLine();
                 userNumber = int.Parse(input);
                 numbers.Add(userNumber);
-                sum = sum + userNumber;
+                doublesum = doublesum + userNumber;
                 if (userNumber > largestNumber)
                 {
                     largestNumber = userNumber;
@@ -46,8 +46,8 @@ class Program
                 }
             }
     Console.WriteLine($"You entered {count} numbers.");
-    Console.WriteLine($"The Total sum is {sum}.");
-    float averageNumber = sum / count;
+    Console.WriteLine($"The Total sum is {doublesum}.");
+    double averageNumber = (double)sum / count;
     Console.WriteLine($"The average number is {averageNumber:F6}");
     Console.WriteLine();
     Console.WriteLine($"The largest number is {largestNumber}");
