@@ -40,6 +40,8 @@ class Program
                 }
             }
         }
-        Console.WriteLine("Would you like to play again?")
+        Console.WriteLine("Would you like to play again?");
+        string answer = Console.ReadLine();
+        answer = answer.ToLower();
     }
 }
