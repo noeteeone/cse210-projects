@@ -27,10 +27,12 @@ class Program
                 numbers.Add(userNumber);
                 sum = sum + userNumber;
             }
-Console.WriteLine($"You entered {count} numbers.");
-Console.WriteLine($"The Total sum is {sum}.");
-Console.WriteLine();
-break;
+    Console.WriteLine($"You entered {count} numbers.");
+    Console.WriteLine($"The Total sum is {sum}.");
+    int averageNumber = sum / count;
+    Console.WriteLine($"The average of the number is {averageNumber}");
+    Console.WriteLine();
+    break;
         }
     }
 }
