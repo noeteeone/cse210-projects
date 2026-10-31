@@ -15,6 +15,7 @@ class Program
             Console.Write("Enter number : ");
             string input = Console.ReadLine();
             int userNumber = int.Parse(input);
+            numbers.Add(userNumber);
             if (userNumber > largestNumber)
             {
                 largestNumber = userNumber;
