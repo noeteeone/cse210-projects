@@ -10,14 +10,9 @@ class Program
         string answer = Console.ReadLine();
         answer = answer.ToLower();
         while (answer == "yes")
-        //if (answer != "yes")
-        //{
-        //    return;
-        //}
-        //else if (answer == "yes")
         {
             Random randomGenerator = new Random();
-            int number1 = randomGenerator.Next(1, 50);
+            int number1 = randomGenerator.Next(1, 100);
             int number2 = 0;
             int count = 0;
             while (number2 != number1)
@@ -44,8 +39,5 @@ class Program
                 }
             }
         }
-        //Console.WriteLine("Would you like to play again?");
-        //answer = Console.ReadLine();
-        //answer = answer.ToLower();
     }
 }
