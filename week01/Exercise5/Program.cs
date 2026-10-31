@@ -41,5 +41,6 @@ class Program
         int number = PromptUserNumber();
         int square = SquareNumber(number);
         Console.WriteLine($"Brother {name}, the square of your number is {square}");
+        Console.WriteLine();
     }
 }
