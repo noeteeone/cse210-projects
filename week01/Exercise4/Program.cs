@@ -19,7 +19,7 @@ class Program
             {
                 largestNumber = userNumber;
             }
-            if (userNumber < smallestNumber)
+            if (userNumber > 0 && userNumber < smallestNumber)
             {
                 smallestNumber = userNumber;
             }
@@ -40,7 +40,7 @@ class Program
                 {
                     largestNumber = userNumber;
                 }
-                if (userNumber < smallestNumber)
+                if (userNumber > 0 && userNumber < smallestNumber)
                 {
                     smallestNumber = userNumber;
                 }
