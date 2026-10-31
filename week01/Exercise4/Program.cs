@@ -6,7 +6,7 @@ class Program
     {
         List<int> numbers = new List<int>();
         int count  = 0;
-        double sum = 0;
+        float sum = 0;
         int largestNumber = 0;
         int smallestNumber = 999999;
         Console.WriteLine("Enter a list of numbers, type 0 when finished");
@@ -47,7 +47,7 @@ class Program
             }
     Console.WriteLine($"You entered {count} numbers.");
     Console.WriteLine($"The Total sum is {sum}.");
-    double averageNumber = sum / count;
+    float averageNumber = sum / count;
     Console.WriteLine($"The average number is {averageNumber}");
     Console.WriteLine();
     Console.WriteLine($"The largest number is {largestNumber}");
