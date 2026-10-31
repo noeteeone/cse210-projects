@@ -37,11 +37,14 @@ class Program
                 {
                     Console.WriteLine("Congratulations you guessed right");
                     Console.WriteLine($"You made {count} guesses");
+                    Console.WriteLine("Would you like to play again?");
+                    answer = Console.ReadLine();
+                    answer = answer.ToLower();
                 }
             }
         }
-        Console.WriteLine("Would you like to play again?");
-        answer = Console.ReadLine();
-        answer = answer.ToLower();
+        //Console.WriteLine("Would you like to play again?");
+        //answer = Console.ReadLine();
+        //answer = answer.ToLower();
     }
 }
