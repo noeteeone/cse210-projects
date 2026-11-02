@@ -9,6 +9,10 @@ class Program
         Console.WriteLine("Do you want to play the gussing game?");
         string answer = Console.ReadLine();
         answer = answer.ToLower();
+        if (answer == "yes")
+        {
+            Console.WriteLine("You can guess a number between 1 and a 100");
+        }
         while (answer == "yes")
         {
             Random randomGenerator = new Random();
@@ -17,7 +21,7 @@ class Program
             int count = 0;
             while (number2 != number1)
             {
-                Console.WriteLine("Enter your number between 1 and 100 : ");
+                Console.Write("Enter your number : ");
                 string input = Console.ReadLine();
                 number2 = int.Parse(input);
                 count = count + 1;
