@@ -6,7 +6,7 @@ class Program
 {
     static void Main()
     {
-        Console.Write("Do you want to play the gussing game?");
+        Console.Write("Do you want to play the gussing game? : ");
         string answer = Console.ReadLine();
         answer = answer.ToLower();
         if (answer == "yes")
@@ -40,7 +40,7 @@ class Program
                     Console.WriteLine("Congratulations you guessed right");
                     Console.WriteLine($"You made {count} guesses");
                     Console.WriteLine();
-                    Console.WriteLine("Would you like to play again?");
+                    Console.Write("Would you like to play again? : ");
                     answer = Console.ReadLine();
                     answer = answer.ToLower();
                     if (answer == "yes")
