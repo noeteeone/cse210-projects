@@ -11,7 +11,7 @@ class Program
         answer = answer.ToLower();
         if (answer == "yes")
         {
-            Console.WriteLine("You can guess a number between 1 and a 100");
+            Console.WriteLine("Guess a number between 1 and a 100");
         }
         while (answer == "yes")
         {
@@ -37,9 +37,14 @@ class Program
                 {
                     Console.WriteLine("Congratulations you guessed right");
                     Console.WriteLine($"You made {count} guesses");
+                    Console.WriteLine();
                     Console.WriteLine("Would you like to play again?");
                     answer = Console.ReadLine();
                     answer = answer.ToLower();
+                    if (answer == "yes")
+                    {
+                        Console.WriteLine("Guess a number between 1 and a 100");
+                    }
                 }
             }
         }
