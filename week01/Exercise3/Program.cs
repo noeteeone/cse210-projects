@@ -12,12 +12,12 @@ class Program
         while (answer == "yes")
         {
             Random randomGenerator = new Random();
-            int number1 = randomGenerator.Next(1, 100);
+            int number1 = randomGenerator.Next(1, 101);
             int number2 = 0;
             int count = 0;
             while (number2 != number1)
             {
-                Console.WriteLine("Enter your number?");
+                Console.WriteLine("Enter your number between 1 and 100 : ");
                 string input = Console.ReadLine();
                 number2 = int.Parse(input);
                 count = count + 1;
