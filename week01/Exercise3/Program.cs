@@ -6,12 +6,12 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("Do you want to play the gussing game?");
+        Console.Write("Do you want to play the gussing game?");
         string answer = Console.ReadLine();
         answer = answer.ToLower();
         if (answer == "yes")
         {
-            Console.WriteLine("Guess a number between 1 and a 100");
+            Console.WriteLine("Guess a number between 1 and 100");
         }
         while (answer == "yes")
         {
@@ -19,6 +19,7 @@ class Program
             int number1 = randomGenerator.Next(1, 101);
             int number2 = 0;
             int count = 0;
+            Console.WriteLine();
             while (number2 != number1)
             {
                 Console.Write("Enter your number : ");
@@ -35,6 +36,7 @@ class Program
                 }
                 else if (number2 == number1)
                 {
+                    Console.WriteLine();
                     Console.WriteLine("Congratulations you guessed right");
                     Console.WriteLine($"You made {count} guesses");
                     Console.WriteLine();
@@ -43,7 +45,7 @@ class Program
                     answer = answer.ToLower();
                     if (answer == "yes")
                     {
-                        Console.WriteLine("Guess a number between 1 and a 100");
+                        Console.WriteLine("Guess a number between 1 and 100");
                     }
                 }
             }
