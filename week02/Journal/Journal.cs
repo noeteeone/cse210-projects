@@ -22,7 +22,7 @@ namespace JournalApplication
         }
         public void LoadFromFile(string file)
         {
-
+            
         }
     }
 }
