@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-namespace JournalApplication
+namespace Week02.Journal
 {
     public class Journal
     {
