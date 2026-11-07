@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 namespace JournalApplication
 {
     public class Journal
@@ -5,11 +7,14 @@ namespace JournalApplication
         public List<Entry> _entries;
         public void AddEntry(Entry newEntry)
         {
-
+            _entries.Add(newEntry);
         }
         public void DisplayAll()
         {
-            
+            foreach (Entry entry in _entries)
+            {
+                enntry.Display();
+            }
         }
         public void SaveToFile(string file)
         {
@@ -17,7 +22,7 @@ namespace JournalApplication
         }
         public void LoadFromFile(string file)
         {
-            
+
         }
     }
 }
