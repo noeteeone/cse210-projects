@@ -1,4 +1,4 @@
-namespace BYU.CSE210.Week02.Journal
+namespace Week02.Journal
 {
     public class Entry
     {

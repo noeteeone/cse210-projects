@@ -1,8 +1,14 @@
-public class PromptGenerator
+using System;
+using System.Collections.Generic;
+
+namespace PromptGeneratorApp
 {
-    public List<string> _prompts;
-    public string GetRandomPrompt()
+    public class PromptGenerator
     {
-        return "";
+        public List<string> _prompts;
+        public string GetRandomPrompt()
+        {
+            return "";
+        }
     }
 }
