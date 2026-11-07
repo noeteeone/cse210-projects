@@ -1,20 +1,23 @@
-public class Journal
+namespace JournalApplication
 {
-    public List<Entry> _entries;
-    public void AddEntry(Entry newEntry)
+    public class Journal
     {
-        
-    }
-    public void DisplayAll()
-    {
-        
-    }
-    public void SaveToFile(string file)
-    {
-        
-    }
-    public void LoadFromFile(string file)
-    {
-        
+        public List<Entry> _entries;
+        public void AddEntry(Entry newEntry)
+        {
+
+        }
+        public void DisplayAll()
+        {
+            
+        }
+        public void SaveToFile(string file)
+        {
+            
+        }
+        public void LoadFromFile(string file)
+        {
+            
+        }
     }
 }
