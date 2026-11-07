@@ -43,7 +43,7 @@ internal class Program
         {
             Date = DateTime.Now.ToShortDateString(),
             PromptText = "What was the best part of your day?",
-            Content = "I worked on learning C# with my journal project."
+            Content = "I visited my childhood friend who I hadn't seen in years."
         };
 
         theJournal.AddEntry(anEntry);
