@@ -13,12 +13,12 @@ namespace JournalApplication
         {
             foreach (Entry entry in _entries)
             {
-                enntry.Display();
+                entry.Display();
             }
         }
         public void SaveToFile(string file)
         {
-            
+
         }
         public void LoadFromFile(string file)
         {
