@@ -98,7 +98,7 @@ internal class Program
             Console.WriteLine("3.   Load Journal from file");
             Console.WriteLine("4.   Save Journal to file");
             Console.WriteLine("5.   Quit");
-            Console.Write("What would you like to do?");
+            Console.Write("What would you like to do? :");
 
             string choice = Console.ReadLine();
             Console.WriteLine();
