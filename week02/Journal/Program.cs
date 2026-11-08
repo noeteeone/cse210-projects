@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 public class Entry
 {
@@ -32,17 +33,47 @@ public class Journal
             Console.WriteLine();
         }
     }
+
+    public void LoadFromFile(string filename)
+    {
+        entries.Clear();
+        if (!File.Exists(filename))
+        {
+            Console.WriteLine("File not found.");
+            return;
+        }
+
+        string[] lines = File.ReadAllLines(filename);
+        for (int i = 0; i + 2 < lines.Length; i += 3)
+        {
+            entries.Add(new Entry
+            {
+                Date = lines[i],
+                PromptText = lines[i + 1],
+                Content = lines[i + 2]
+            });
+        }
+    }
+
+    public void SaveToFile(string filename)
+    {
+        List<string> lines = new List<string>();
+        foreach (var entry in entries)
+        {
+            lines.Add(entry.Date);
+            lines.Add(entry.PromptText);
+            lines.Add(entry.Content);
+        }
+
+        File.WriteAllLines(filename, lines);
+    }
 }
 
 internal class Program
 {
-    static void Main(string[] )
+    static void Main(string[] args)
     {
         Journal theJournal = new Journal();
-        Entry anEntry = new Entry
-        {
-            Date = DateTime.Now.ToShortDateString(),
-        }
         List<string> prompts = new List<string>
         {
             "What was the best part of my day?",
@@ -54,7 +85,7 @@ internal class Program
             "What do I regret doing today and how do I intend to undo it?",
             "What Bible verse uplifted your spirit today?"
         };
-        Random randomPrompt = new Random();
+        Random random = new Random();
 
         bool running = true;
         while (running)
@@ -75,13 +106,18 @@ internal class Program
             switch (choice)
             {
                 case "1":
-                    string randomPrompt = prompts[randomPrompt.Next(prompts.Count)];
-                    Console.WriteLine($"Prompt: {randomPrompt}");
+                    string prompt = prompts[random.Next(prompts.Count)];
+                    Console.WriteLine($"Prompt: {prompt}");
                     Console.Write(">");
                     string response = Console.ReadLine();
                     string date = DateTime.Now.ToShortDateString();
 
-                    theJournal.AddEntry(new Entry(randomPrompt, response, date));
+                    theJournal.AddEntry(new Entry
+                    {
+                        PromptText = prompt,
+                        Content = response,
+                        Date = date
+                    });
                     break;
 
                 case "2":
@@ -90,7 +126,7 @@ internal class Program
 
                 case "3":
                     Console.Write("Enter the filename to load (e.g journal.txt): ");
-                    string loadfile = Console.ReadLine();
+                    string loadFile = Console.ReadLine();
                     theJournal.LoadFromFile(loadFile);
                     break;
 
@@ -110,13 +146,5 @@ internal class Program
                 
             }
         }
-        {
-            
-            PromptText = "What was the best part of your day?",
-            Content = "I visited my childhood friend who I hadn't seen in years."
-        };
-
-        theJournal.AddEntry(anEntry);
-        theJournal.DisplayAll();
     }
 }

@@ -7,9 +7,9 @@ namespace Week02.Journal
         public string _entryText { get; set; }
         public Entry(string Prompt, string entryText, string date)
         {
-            Prompt = Prompt;
-            entryText = entryText;
-            Date = date;
+            _promptText = Prompt;
+            _entryText = entryText;
+            _date = date;
         }
         public void Display()
         {

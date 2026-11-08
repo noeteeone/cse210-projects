@@ -18,7 +18,7 @@ namespace Week02.Journal
             {
                 string cleanPrompt = entry._promptText.Replace("\n", " ");
                 string cleanResponse = entry._entryText.Replace("\n", " ");
-                Console.WriteLine($"{entry.Date} - Prompt: {cleanPrompt} - Entry: {cleanResponse}");
+                Console.WriteLine($"{entry._date} - Prompt: {cleanPrompt} - Entry: {cleanResponse}");
             }
         }
         public void SaveToFile(string file)
@@ -51,17 +51,14 @@ namespace Week02.Journal
             try
             {
                 _entries.Clear();
-                string[] lines = file.ReadAllLines(file);
-                foreach (string line in lines)
+                string[] lines = File.ReadAllLines(file);
+                for (int i = 0; i + 2 < lines.Length; i += 3)
                 {
-                    string[] parts = line.Split("\", " ");
-                    if (parts.Length == 3)
-                    {
-                        string date = parts[0];
-                        string prompt = parts[1];
-                        string entryText = parts[2];
-                        Entry entry = new Entry(prompt, entryText, date);
-                    }
+                    string date = lines[i];
+                    string prompt = lines[i + 1];
+                    string entryText = lines[i + 2];
+                    Entry entry = new Entry(prompt, entryText, date);
+                    _entries.Add(entry);
                 }
                 Console.WriteLine($"Journal loaded from file: {file} successfully");
             }
