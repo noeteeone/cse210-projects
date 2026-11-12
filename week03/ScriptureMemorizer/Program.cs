@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 namespace ScriptureMemorizer
 {
     class Program
@@ -6,9 +9,9 @@ namespace ScriptureMemorizer
         {
             // Define the reference and scripture text.
             Reference reference = new Reference("John", 3, 16);
-            string scriptureText = "For God so loved the world that he gave his only begotten son, that whosoever believed in him should not perish but have everlasting life.";
+            string scriptureText = "For God so loved the world that he gave his only begotten son, that whosoever believeth in him should not perish but have everlasting life.";
             var words = scriptureText
-                .Split(new[] {" "}, StringSplitOptions.RemoveEmptyEntries)
+                .Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(word => new Word(word.Trim()))
                 .ToList();
             Scripture scripture = new Scripture(reference, words);
