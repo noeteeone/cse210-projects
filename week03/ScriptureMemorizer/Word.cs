@@ -8,22 +8,28 @@ public class Word
         _text = text;
         _isHidden = false;
     }
+
     public void Hide()
     {
         _isHidden = true;
     }
+
     public void Show()
     {
         _isHidden = false;
     }
+
     public string GetDisplayText()
     {
         if (_isHidden)
         {
-            return new string("-".ToCharArray(), 0, _text.Length);
+            char[] masked = _text.Select(c => char.IsLetter(c) ? '_' : c).ToArray();
+            return new string(masked);
         }
+
         return _text;
     }
+
     public bool IsHidden()
     {
         return _isHidden;
