@@ -13,6 +13,7 @@ namespace ScriptureMemorizer
             {
                 Console.Clear();
                 Console.WriteLine("Welcome to the Scripture Memorizer!");
+                Console.WriteLine();
                 Console.WriteLine(scripture.GetDisplayText());
                 Console.WriteLine();
 
