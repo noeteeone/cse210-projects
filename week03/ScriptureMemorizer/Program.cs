@@ -87,7 +87,7 @@ namespace ScriptureMemorizer
 
             if (string.IsNullOrEmpty(book) || string.IsNullOrEmpty(chapter) || string.IsNullOrEmpty(verse) || string.IsNullOrEmpty(text))
             {
-                Console.WriteLine("\nAll fields are required! Press Enter to return.");
+                Console.WriteLine("All fields are required! Press Enter to return.");
                 Console.ReadLine();
                 return;
             }
@@ -96,7 +96,7 @@ namespace ScriptureMemorizer
             string line = $"{book}|{chapter}|{verse}|{text}";
             File.AppendAllLines(FilePath, new[] { line });
 
-            Console.WriteLine("\nScripture saved successfully offline! Press Enter to return.");
+            Console.WriteLine("Scripture saved successfully offline! Press Enter to return.");
             Console.ReadLine();
         }
 
@@ -158,10 +158,8 @@ namespace ScriptureMemorizer
                     Console.WriteLine();
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("Press Enter to hide more words or type \"quit\" to exit.");
-                    string input = Console.ReadLine()?.Trim().ToLower();
+                Console.WriteLine("Press Enter to hide more words or type \"quit\" to exit.");
+                string input = Console.ReadLine()?.Trim().ToLower();
                 
                 if (input == "quit")
                 {
@@ -172,5 +170,4 @@ namespace ScriptureMemorizer
             }
         }
     }
-}
 }
