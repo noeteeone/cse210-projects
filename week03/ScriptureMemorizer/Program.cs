@@ -78,10 +78,10 @@ namespace ScriptureMemorizer
             Console.Write("Enter Chapter: ");
             string chapter = Console.ReadLine()?.Trim();
 
-            Console.Write("Enter Verse: ");
+            Console.Write("Enter Verse or verse range (e.g., 16 or 16-18): ");
             string verse = Console.ReadLine()?.Trim();
 
-            Console.Write("Enter Text: ");
+            Console.Write("Enter scripture Text: ");
             string text = Console.ReadLine()?.Trim();
 
             if (string.IsNullOrEmpty(book) || string.IsNullOrEmpty(chapter) || string.IsNullOrEmpty(verse) || string.IsNullOrEmpty(text))
@@ -91,7 +91,7 @@ namespace ScriptureMemorizer
                 return;
             }
 
-            // Append to the local text file using a pipe | delimiter
+            // Append the new scripture to the local text file using a pipe | delimiter
             string line = $"{book}|{chapter}|{verse}|{text}";
             File.AppendAllLines(FilePath, new[] { line });
 
