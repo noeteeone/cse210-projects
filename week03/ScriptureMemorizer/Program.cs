@@ -1,14 +1,10 @@
-//using System;
-//namespace ScriptureMemorizer
-//{
-   // class Program
-    //{
-        //static void Main(string[] args)
-        //{
-            // Define the reference and scripture text.
-            //Reference reference = new Reference("John", 3, 16);
-            //string scriptureText = "For God so loved the world that he gave his only begotten son, that whosoever believeth in him should not perish but have everlasting life.";
-            //Scripture scripture = new Scripture(reference, scriptureText);
+// Program for the Scripture Memoriser. This program allows users to store 
+//scripture verses offline and practice memorising them by hiding random 
+//words from the verse. In addition, it provides an easy to use interface 
+//for users to add new scripture  verses to an offline file and select a 
+//verse to memorise.The program will then display the verse and allow the 
+//users to hide random words from the verse untill all the words are hidden.
+
 using System;
 using System.Collections.Generic;
 using System.IO;
