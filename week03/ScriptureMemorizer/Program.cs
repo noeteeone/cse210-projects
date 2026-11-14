@@ -157,7 +157,7 @@ namespace ScriptureMemorizer
                 {
                     break;
                 }
-                if (scripture.IsCompletelyHidden() is true)
+                if (scripture.IsCompletelyHidden())
                 {
                     Console.WriteLine("All words are hidden! You have successfully memorised the scripture.");
                     Console.WriteLine();
