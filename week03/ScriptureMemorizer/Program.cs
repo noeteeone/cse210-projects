@@ -152,17 +152,17 @@ namespace ScriptureMemorizer
                 Console.WriteLine(scripture.GetDisplayText());
                 Console.WriteLine();
 
-                if (scripture.IsCompletelyHidden())
-                {
-                    Console.WriteLine("All words are hidden! You have successfully memorised the scripture.");
-                    Console.WriteLine();
-                    break;
-                }
                 Console.WriteLine("Press Enter to hide more words or type \"quit\" to exit.");
                 string input = Console.ReadLine()?.Trim().ToLower();
                 
                 if (input == "quit")
                 {
+                    break;
+                }
+                if (scripture.IsCompletelyHidden())
+                {
+                    Console.WriteLine("All words are hidden! You have successfully memorised the scripture.");
+                    Console.WriteLine();
                     break;
                 }
                 // Hide 3 random words each time the user presses Enter.
