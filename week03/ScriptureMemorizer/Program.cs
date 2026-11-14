@@ -31,7 +31,7 @@ namespace ScriptureMemorizer
                 Console.WriteLine("1. Memorize a stored scripture");
                 Console.WriteLine("2. Add a new scripture to offline storage");
                 Console.WriteLine("3. Exit");
-                Console.Write("\nChoose an option: ");
+                Console.Write("Choose an option: ");
 
                 string choice = Console.ReadLine()?.Trim();
 
@@ -123,7 +123,7 @@ namespace ScriptureMemorizer
                 }
             }
 
-            Console.Write("\nEnter the number of the scripture to memorize: ");
+            Console.Write("Enter the number of the scripture to memorize: ");
             if (!int.TryParse(Console.ReadLine(), out int selection) || selection < 1 || selection > lines.Length)
             {
                 Console.WriteLine("Invalid selection. Press Enter to return.");
