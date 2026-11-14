@@ -72,7 +72,6 @@ namespace ScriptureMemorizer
         {
             Console.Clear();
             Console.WriteLine("=== Add New Scripture ===");
-            
             Console.Write("Enter Book (e.g., Proverbs): ");
             string book = Console.ReadLine()?.Trim();
 
@@ -154,7 +153,6 @@ namespace ScriptureMemorizer
 
                 Console.WriteLine("Press Enter to hide more words or type \"quit\" to exit.");
                 string input = Console.ReadLine()?.Trim().ToLower();
-                
                 if (input == "quit")
                 {
                     break;
