@@ -160,10 +160,9 @@ namespace ScriptureMemorizer
                 }
                 else
                 {
-                    Console.WriteLine("Press Enter to hide more words or type quit to exit.");
-                }
-                Console.WriteLine("Press Enter to hide more words or type \"quit\" to exit.");
-                string input = Console.ReadLine()?.Trim().ToLower();
+                    Console.WriteLine("Press Enter to hide more words or type \"quit\" to exit.");
+                    string input = Console.ReadLine()?.Trim().ToLower();
+                
                 if (input == "quit")
                 {
                     break;
