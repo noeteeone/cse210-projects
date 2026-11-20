@@ -53,7 +53,7 @@ class Program
                 Console.WriteLine($" - {comment.Name}: \"{comment.Text}\"");;
             }
             // Completed the broken output line below
-            Console.WriteLine($"Channel: {video.Author} | Duration: {video.Length} seconds");
+            //Console.WriteLine($"Channel: {video.Author} | Duration: {video.Length} seconds");
         }
         Console.WriteLine(new string('-', 50));
     }
