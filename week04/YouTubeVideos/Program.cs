@@ -44,7 +44,7 @@ class Program
             Console.WriteLine(new string('-', 50));
             Console.WriteLine($"Title: {video.Title}");
             Console.WriteLine($"Author: {video.Author}");
-            Console.WriteLine($"Length: {video.Length}");
+            Console.WriteLine($"Length: {video.Length} seconds");
             Console.WriteLine($"Number of Comments: {video.Comments.Count}");
             Console.WriteLine("Comments: ");
 
