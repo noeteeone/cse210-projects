@@ -1,5 +1,6 @@
 using System;
-using System.Collections.Generic; 
+using System.Collections.Generic;
+using System.Transactions;
 using YouTubeVideos;
 
 class Program
@@ -44,9 +45,17 @@ class Program
             Console.WriteLine($"Title: {video.Title}");
             Console.WriteLine($"Author: {video.Author}");
             Console.WriteLine($"Length: {video.LengthInSeconds}");
+            Console.WriteLine($"Number of Comments: {video.Comments.Count}");
+            Console.WriteLine("Comments: ");
+
+            foreach (Comment comment in video.Comments)
+            {
+                Console.WriteLine($" - {comment.Name}: \"{comment.Text}\"");;
+            }
             // Completed the broken output line below
-            Console.WriteLine($"Channel: {video.Author} | Duration: {video.LengthInSeconds} seconds"); 
+            //Console.WriteLine($"Channel: {video.Author} | Duration: {video.LengthInSeconds} seconds");
         }
+        Console.WriteLine(new string('-', 50));
     }
 }
 
