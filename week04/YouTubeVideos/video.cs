@@ -7,13 +7,13 @@ namespace YouTubeVideos
     {
         public string Title { get; set; }
         public string Author { get; set; }
-        public int LengthInSeconds { get; set; }
+        public int Length { get; set; }
         public List<Comment> Comments { get; private set; }
         public Video(string title, string author, int LengthInSeconds)
         {
             Title = title;
             Author = author;
-            LengthInSeconds = LengthInSeconds;
+            Length = LengthInSeconds;
             Comments = new List<Comment>();
         }
         public void AddComment(string Name, string Text)

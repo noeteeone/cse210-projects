@@ -44,7 +44,7 @@ class Program
             Console.WriteLine(new string('-', 50));
             Console.WriteLine($"Title: {video.Title}");
             Console.WriteLine($"Author: {video.Author}");
-            Console.WriteLine($"Length: {video.LengthInSeconds}");
+            Console.WriteLine($"Length: {video.Length}");
             Console.WriteLine($"Number of Comments: {video.Comments.Count}");
             Console.WriteLine("Comments: ");
 
@@ -53,7 +53,7 @@ class Program
                 Console.WriteLine($" - {comment.Name}: \"{comment.Text}\"");;
             }
             // Completed the broken output line below
-            Console.WriteLine($"Channel: {video.Author} | Duration: {video.LengthInSeconds} seconds");
+            Console.WriteLine($"Channel: {video.Author} | Duration: {video.Length} seconds");
         }
         Console.WriteLine(new string('-', 50));
     }
