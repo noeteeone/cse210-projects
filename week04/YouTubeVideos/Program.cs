@@ -5,7 +5,7 @@ using YouTubeVideos;
 
 class Program
 {
-    static void Main(string[] args) 
+    static void Main(string[] args)
     {
         //Console.WriteLine("Hello World! This is the YouTubeVideos Project.");
         List<Video> videoList = new List<Video>();
@@ -53,7 +53,7 @@ class Program
                 Console.WriteLine($" - {comment.Name}: \"{comment.Text}\"");;
             }
             // Completed the broken output line below
-            //Console.WriteLine($"Channel: {video.Author} | Duration: {video.LengthInSeconds} seconds");
+            Console.WriteLine($"Channel: {video.Author} | Duration: {video.LengthInSeconds} seconds");
         }
         Console.WriteLine(new string('-', 50));
     }
