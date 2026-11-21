@@ -8,7 +8,7 @@ class Program
         //Console.WriteLine("Hello World! This is the OnlineOrdering Project.");
         //1. Create a US Order
         Address usAddress = new Address("123 Main St", "Seattle", "WA", "USA");
-            Customer usCustomer = new Customer("John Doe", usAddress);
+        Customer usCustomer = new Customer("John Doe", usAddress);
         Order usOrder = new Order(usCustomer);
 
         usOrder.AddProduct(new Product("Wireless Mouse", "M101", 15.50m, 2));
@@ -32,5 +32,6 @@ class Program
         Console.WriteLine(internationalOrder.GetPackingLabel());
         Console.WriteLine(internationalOrder.GetShippingLabel());
         Console.WriteLine($"Total Cost (including $35 International Shipping): ${internationalOrder.calculateTotalCost():F2}");
+        Console.WriteLine(new string('-', 40) + "\n");
     }
 }
