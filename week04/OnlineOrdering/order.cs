@@ -41,7 +41,7 @@ namespace ProductOrderingSystem
         public string GetPackingLabel()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("====== PACKING LABEL ==========");
+            sb.AppendLine("====== PACKING LABEL ==============");
             foreach (var product in _products)
             {
                 sb.AppendLine($"Product: {product.GetName()} (ID: {product.GetProductId()}) X {product.GetQuantity()}");
@@ -52,7 +52,7 @@ namespace ProductOrderingSystem
         public string GetShippingLabel()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("====== SHIPPING LABEL ==========");
+            sb.AppendLine("====== SHIPPING LABEL ==============");
             sb.AppendLine(_customer.GetName());
             sb.AppendLine(_customer.GetCustomerAddress().GetFullAddressString());
 

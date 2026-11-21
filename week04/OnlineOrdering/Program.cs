@@ -19,7 +19,7 @@ class Program
         Console.WriteLine(usOrder.GetPackingLabel());
         Console.WriteLine(usOrder.GetShippingLabel());
         Console.WriteLine($"Total Cost (including $5 USA shipping): ${usOrder.calculateTotalCost():F2}\n");
-        Console.WriteLine(new string('-', 70) + "\n");
+        Console.WriteLine(new string('-', 55) + "\n");
 
         //2. Create an international order
         Address internationalAddress = new Address("456 Maple Ave", "Toronto", "ON", "Canada");
@@ -33,7 +33,8 @@ class Program
         Console.WriteLine(internationalOrder.GetPackingLabel());
         Console.WriteLine(internationalOrder.GetShippingLabel());
         Console.WriteLine($"Total Cost (including $35 International Shipping): ${internationalOrder.calculateTotalCost():F2}");
-        Console.WriteLine(new string('-', 70) + "\n");
+        Console.WriteLine();
+        Console.WriteLine(new string('-', 55) + "\n");
         Console.WriteLine();
     }
 }
