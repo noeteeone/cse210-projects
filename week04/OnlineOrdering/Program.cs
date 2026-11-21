@@ -16,7 +16,6 @@ class Program
 
         //Display US order information
         Console.WriteLine(new string('-', 70) + "\n");
-        Console.WriteLine();
         Console.WriteLine(usOrder.GetPackingLabel());
         Console.WriteLine(usOrder.GetShippingLabel());
         Console.WriteLine($"Total Cost (including $5 USA shipping): ${usOrder.calculateTotalCost():F2}\n");
@@ -35,5 +34,6 @@ class Program
         Console.WriteLine(internationalOrder.GetShippingLabel());
         Console.WriteLine($"Total Cost (including $35 International Shipping): ${internationalOrder.calculateTotalCost():F2}");
         Console.WriteLine(new string('-', 70) + "\n");
+        Console.WriteLine();
     }
 }
