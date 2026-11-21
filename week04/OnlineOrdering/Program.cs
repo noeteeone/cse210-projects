@@ -22,7 +22,7 @@ class Program
         Console.WriteLine(new string('-', 60) + "\n");
 
         //2. Create an international order
-        Address internationalAddress = new Address("456 Maple Ave", "Toronto", "ON", "Canada");
+        Address internationalAddress = new Address("6189 Nicoz Diamond Ave", "Harare", "Mash East", "ZIMBABWE");
         Customer internationalCustomer = new Customer("Stella Chiweshe", internationalAddress);
         Order internationalOrder = new Order(internationalCustomer);
 
