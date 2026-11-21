@@ -8,11 +8,11 @@ class Program
         //Console.WriteLine("Hello World! This is the OnlineOrdering Project.");
         //1. Create a US Order
         Address usAddress = new Address("123 Main St", "Seattle", "WA", "USA");
-        Customer usCustomer = new Customer("John Doe", usAddress);
+        Customer usCustomer = new Customer("Simba Mavhunga", usAddress);
         Order usOrder = new Order(usCustomer);
 
-        usOrder.AddProduct(new Product("Wireless Mouse", "M101", 15.50m, 2));
-        usOrder.AddProduct(new Product("Mechanical Keyboard", "K502", 75.00m, 1));
+        usOrder.AddProduct(new Product("Wireless Mouse", "M101", 15.50m, 4));
+        usOrder.AddProduct(new Product("Mechanical Keyboard", "K502", 75.00m, 2));
 
         //Display US order information
         Console.WriteLine(new string('-', 60) + "\n");
@@ -23,11 +23,11 @@ class Program
 
         //2. Create an international order
         Address internationalAddress = new Address("456 Maple Ave", "Toronto", "ON", "Canada");
-        Customer internationalCustomer = new Customer("Jane Smith", internationalAddress);
+        Customer internationalCustomer = new Customer("Stella Chiweshe", internationalAddress);
         Order internationalOrder = new Order(internationalCustomer);
 
-        internationalOrder.AddProduct(new Product("USB-C Hub", "H303", 40.00m, 1));
-        internationalOrder.AddProduct(new Product("HDMI Cable", "C202", 12.00m, 3));
+        internationalOrder.AddProduct(new Product("USB-C Hub", "H303", 40.00m, 3));
+        internationalOrder.AddProduct(new Product("HDMI Cable", "C202", 12.00m, 4));
 
         //Display international order information
         Console.WriteLine(internationalOrder.GetPackingLabel());
