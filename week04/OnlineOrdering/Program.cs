@@ -35,6 +35,5 @@ class Program
         Console.WriteLine($"Total Cost (including $35 International Shipping): ${internationalOrder.calculateTotalCost():F2}");
         Console.WriteLine();
         Console.WriteLine(new string('-', 60) + "\n");
-        Console.WriteLine();
     }
 }
