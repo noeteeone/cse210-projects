@@ -15,11 +15,11 @@ class Program
         usOrder.AddProduct(new Product("Mechanical Keyboard", "K502", 75.00m, 1));
 
         //Display US order information
-        Console.WriteLine(new string('-', 70) + "\n");
+        Console.WriteLine(new string('-', 60) + "\n");
         Console.WriteLine(usOrder.GetPackingLabel());
         Console.WriteLine(usOrder.GetShippingLabel());
         Console.WriteLine($"Total Cost (including $5 USA shipping): ${usOrder.calculateTotalCost():F2}\n");
-        Console.WriteLine(new string('-', 55) + "\n");
+        Console.WriteLine(new string('-', 60) + "\n");
 
         //2. Create an international order
         Address internationalAddress = new Address("456 Maple Ave", "Toronto", "ON", "Canada");
@@ -34,7 +34,7 @@ class Program
         Console.WriteLine(internationalOrder.GetShippingLabel());
         Console.WriteLine($"Total Cost (including $35 International Shipping): ${internationalOrder.calculateTotalCost():F2}");
         Console.WriteLine();
-        Console.WriteLine(new string('-', 55) + "\n");
+        Console.WriteLine(new string('-', 60) + "\n");
         Console.WriteLine();
     }
 }
