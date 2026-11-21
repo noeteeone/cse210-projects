@@ -1,6 +1,5 @@
 using System;
 using ProductOrderingSystem;
-
 class Program
 {
     static void Main(string[] args)
