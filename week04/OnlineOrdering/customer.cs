@@ -25,7 +25,6 @@ namespace ProductOrderingSystem
         public bool LivesInUSA()
         {
             return _customerAddress.IsInUSA();
-            Console.WriteLine();
         }
     }
 }

@@ -57,7 +57,6 @@ namespace ProductOrderingSystem
             sb.AppendLine(_customer.GetCustomerAddress().GetFullAddressString());
 
             return sb.ToString();
-            Console.WriteLine();
         }
     }
 }

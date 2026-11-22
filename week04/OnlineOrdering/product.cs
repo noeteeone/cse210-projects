@@ -36,7 +36,6 @@ namespace ProductOrderingSystem
         public decimal GetTotalCost()
         {
             return _price * _quantity;
-            Console.WriteLine();
         }
     }
 }
