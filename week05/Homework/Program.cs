@@ -1,38 +1,54 @@
 using System;
-using Inheritance;
 
 class Program
 {
     static void Main(string[] args)
     {
-        //Console.WriteLine("Hello World! This is the Homework Project.");
-        //Maths Assignment
-        MathAssignment math = new MathAssignment("Roberto Rodriguez", " - Fractions", "Section 7.3", "8 to 19");
-        Console.WriteLine();
-        Console.WriteLine($"{math.StudentName}  {math.Topic}");
-        Console.WriteLine($"{math.TextBookSection} Problems {math.Problems}.");
-        Console.WriteLine();
+        // Create a base "Assignment" object
+        Assignment a1 = new Assignment("Samuel Bennett", "Multiplication");
+        Console.WriteLine(a1.GetSummary());
 
-        //Writing Assignment
-        WritingAssignment writing = new WritingAssignment("Mary Waters", " - European History", "The Causes of World War II by Mary Waters");
-        Console.WriteLine($"{writing.StudentName} {writing.Topic}");
-        Console.WriteLine($"{writing.Title}");
-        Console.WriteLine();
+        // Now create the derived class assignments
+        MathAssignment a2 = new MathAssignment("Roberto Rodriguez", "Fractions", "7.3", "8-19");
+        Console.WriteLine(a2.GetSummary());
+        Console.WriteLine(a2.GetHomeworkList());
+
+        WritingAssignment a3 = new WritingAssignment("Mary Waters", "European History", "The Causes of World War II");
+        Console.WriteLine(a3.GetSummary());
+        Console.WriteLine(a3.GetWritingInformation());
     }
 }
 
-class MathAssignment
+class MathAssignment : Assignment
 {
-    public string StudentName { get; }
-    public string Topic { get; }
-    public string TextBookSection { get; }
-    public string Problems { get; }
+    private string _textbookSection;
+    private string _problems;
 
-    public MathAssignment(string studentName, string topic, string textBookSection, string problems)
+    public MathAssignment(string studentName, string topic, string textbookSection, string problems)
+        : base(studentName, topic)
     {
-        StudentName = studentName;
-        Topic = topic;
-        TextBookSection = textBookSection;
-        Problems = problems;
+        _textbookSection = textbookSection;
+        _problems = problems;
+    }
+
+    public string GetHomeworkList()
+    {
+        return $"Section {_textbookSection} Problems {_problems}";
+    }
+}
+
+class WritingAssignment : Assignment
+{
+    private string _title;
+
+    public WritingAssignment(string studentName, string topic, string title)
+        : base(studentName, topic)
+    {
+        _title = title;
+    }
+
+    public string GetWritingInformation()
+    {
+        return $"{_title} by {GetStudentName()}";
     }
 }

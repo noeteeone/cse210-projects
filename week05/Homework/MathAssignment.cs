@@ -22,8 +22,12 @@ public class MathAssignment : Assignment
     public MathAssignment(string studentName, string topic, string textBookSection, string problems)
         : base(studentName, topic)
     {
-        TextBookSection = textBookSection;
-        Problems = problems;
+        _textBookSection = textBookSection;
+        _problems = problems;
+    }
+    public string GetHomeworkList()
+    {
+        return $"Section{_textBookSection} Problems {_problems}";
     }
 }
 
