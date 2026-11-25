@@ -8,13 +8,16 @@ class Program
         //Console.WriteLine("Hello World! This is the Homework Project.");
         //Maths Assignment
         MathAssignment math = new MathAssignment("Roberto Rodriguez", " - Fractions", "Section 7.3", "8 to 19");
+        Console.WriteLine();
         Console.WriteLine($"{math.StudentName}  {math.Topic}");
         Console.WriteLine($"{math.TextBookSection} Problems {math.Problems}.");
+        Console.WriteLine();
 
         //Writing Assignment
         WritingAssignment writing = new WritingAssignment("Mary Waters", " - European History", "The Causes of World War II by Mary Waters");
         Console.WriteLine($"{writing.StudentName} {writing.Topic}");
         Console.WriteLine($"{writing.Title}");
+        Console.WriteLine();
     }
 }
 
