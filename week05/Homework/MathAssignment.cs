@@ -11,15 +11,15 @@ public class Assignment
     // Child Class 1: Inherits from Assignment
     public class MathAssignment : Assignment
     {
-        public string TextBox { get; set; }
+        public string TextBookSection { get; set; }
         public string Problems { get; set; }
         
         // Constructor calls the parent constructor using 'base'
-        public MathAssignment(string studentName, string topic, string textBox, string problems)
+        public MathAssignment(string studentName, string topic, string textBookSection, string problems)
         {
             StudentName = studentName;
             Topic = topic;
-            TextBox = textBox;
+            TextBookSection = textBookSection;
             Problems = problems;
         }
     }

@@ -6,8 +6,9 @@ class Program
     static void Main(string[] args)
     {
         //Console.WriteLine("Hello World! This is the Homework Project.");
-        MathAssignment math = new MathAssignment("Alex", "Algebra", "Math Vol 1", "1 to 10");
-        Console.WriteLine($"{math.StudentName} is doing {math.Topic} homework out of {math.TextBox}.");
+        MathAssignment math = new MathAssignment("Roberto Rodriguez", " - Fractions", "Section 7.3", "8 to 19");
+        Console.WriteLine($"{math.StudentName}  {math.Topic};");
+        Console.WriteLine($"{math.TextBookSection} Problems {math.Problems}.");
     }
 }
 
@@ -16,14 +17,14 @@ class MathAssignment
 {
     public string StudentName { get; }
     public string Topic { get; }
-    public string TextBox { get; }
-    public string Section { get; }
+    public string TextBookSection { get; }
+    public string Problems { get; }
 
-    public MathAssignment(string studentName, string topic, string textBox, string section)
+    public MathAssignment(string studentName, string topic, string textBookSection, string problems)
     {
         StudentName = studentName;
         Topic = topic;
-        TextBox = textBox;
-        Section = section;
+        TextBookSection = textBookSection;
+        Problems = problems;
     }
 }
